@@ -1,0 +1,197 @@
+<!doctype html>
+
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thinkora Study — Date Sheets</title>
+  <style>
+    :root{
+      --blue-1:#0f172a; /* deep */
+      --blue-2:#0ea5e9; /* bright */
+      --blue-3:#1e3a8a; /* indigo */
+      --card:#ffffff;
+      --muted:#e6f2fb;
+      --glass: rgba(255,255,255,0.06);
+      --accent:#053f76;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: Inter, system-ui, Arial, sans-serif; background: linear-gradient(180deg,var(--blue-1),#062f4f 60%); color:#062f4f;
+      min-height:100vh; padding:24px;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }.container{max-width:1100px;margin:0 auto;}
+
+header{
+  display:flex;align-items:center;gap:16px;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6); color:#fff;
+}
+
+/* Ashoka Chakra + text */
+.brand{display:flex;align-items:center;gap:12px}
+.chakra{width:64px;height:64px;display:flex;align-items:center;justify-content:center}
+.title{font-size:18px;font-weight:700}
+.subtitle{font-size:13px;opacity:0.9}
+.satyamev{margin-left:12px;color:#fff;font-weight:700;font-size:14px;letter-spacing:1px}
+
+main{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:22px}
+
+nav{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:10px;color:#dbeafe}
+nav h3{margin:0 0 8px 0;color:var(--blue-2)}
+.nav-link{display:block;padding:10px;border-radius:8px;color:#e6f7ff;text-decoration:none;margin-bottom:8px}
+.nav-link.active{background:linear-gradient(90deg,var(--blue-3),var(--blue-2));box-shadow:0 6px 14px rgba(14,165,233,0.12)}
+
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.25)}
+
+h1,h2{margin:6px 0}
+h1{font-size:20px;color:var(--accent)}
+h2{font-size:14px;color:#374151}
+
+table{width:100%;border-collapse:collapse;margin-top:14px}
+th,td{padding:10px;border:1px solid #e6eef9;text-align:center;font-size:14px}
+th{background:linear-gradient(90deg,var(--blue-2),#60a5fa);color:#fff}
+
+.stamp{position:absolute;right:28px;top:26px;font-size:64px;color:rgba(14,165,233,0.06);font-weight:800;transform:rotate(-22deg);pointer-events:none}
+
+footer{margin-top:18px;text-align:center;color:#cfe9ff;font-size:13px}
+
+/* responsive */
+@media (max-width:800px){
+  main{grid-template-columns:1fr}
+  .chakra{width:46px;height:46px}
+}
+
+/* small utility */
+.right{display:flex;gap:10px;align-items:center}
+.btn{background:var(--blue-2);color:#063; padding:6px 10px;border-radius:8px;border:none;color:#fff;cursor:pointer}
+
+/* watermark text inside card */
+.watermark{position:relative}
+.watermark:after{content:'THINKORA';position:absolute;left:50%;top:40%;transform:translate(-50%,-50%) rotate(-30deg);font-size:80px;color:rgba(14,165,233,0.05);font-weight:900;pointer-events:none}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="chakra" aria-hidden="true">
+          <!-- Ashoka Chakra SVG (simplified, decorative) -->
+          <svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" fill="none" stroke="#0ea5e9" stroke-width="2" />
+            <!-- spokes -->
+            <g stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round">
+              <path d="M32 2 L32 62"/>
+              <path d="M2 32 L62 32"/>
+              <path d="M9 9 L55 55"/>
+              <path d="M55 9 L9 55"/>
+              <path d="M18 2 L46 62"/>
+              <path d="M46 2 L18 62"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div class="title">Thinkora Study</div>
+          <div class="subtitle">Date Sheets • Official</div>
+        </div>
+      </div>
+      <div style="flex:1"></div>
+      <div class="satyamev">सत्यमेव जयते</div>
+    </header><main>
+  <nav>
+    <h3>Sections</h3>
+    <a class="nav-link active" data-target="mid">Mid-Term Date Sheet</a>
+    <a class="nav-link" data-target="pre">Pre-Board Date Sheet</a>
+    <a class="nav-link" data-target="final">Final Board Date Sheet</a>
+    <div style="height:8px"></div>
+    <small>Theme: Blue • Official look • Watermark</small>
+  </nav>
+
+  <section>
+    <div class="card watermark" id="mid">
+      <div class="stamp">TSI</div>
+      <h1>Thinkora Study ltd</h1>
+      <h2>Mid-Term Examination Date Sheet - 2025</h2>
+
+      <table>
+        <thead>
+          <tr><th>Subject</th><th>Date</th><th>Time</th><th>Duration</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mathematics</td><td>26 Sep 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Sanskrit</td><td>03 Oct 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Hindi</td><td>08 Oct 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>English</td><td>14 Oct 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Natural Science</td><td>18 Oct 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Social Science</td><td>24 Oct 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>IT / PAT</td><td>25 Oct 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card watermark" id="pre" style="display:none">
+      <div class="stamp">TSI Delhi</div>
+      <h1>Thinkora Study</h1>
+      <h2>Pre-Board Examination Date Sheet - 2025</h2>
+
+      <table>
+        <thead>
+          <tr><th>Subject</th><th>Date</th><th>Time</th><th>Duration</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Natural Science</td><td>11 Dec 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Sanskrit</td><td>12 Dec 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Mathematics</td><td>15 Dec 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Hindi</td><td>16 Dec 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>IT / PAT</td><td>17 Dec 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>English</td><td>18 Dec 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+          <tr><td>Social Science</td><td>20 Dec 2025</td><td>02:00 PM</td><td>3 Hours</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card watermark" id="final" style="display:none">
+      <div class="stamp">TSI</div>
+      <h1>Thinkora Study ltd</h1>
+      <h2>Board - Tentative Examination Date Sheet - 2026</h2>
+
+      <table>
+        <thead>
+          <tr><th>Subject</th><th>Date</th><th>Time</th><th>Duration</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mathematics</td><td>17 Feb 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+          <tr><td>PAT</td><td>20 Feb 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+          <tr><td>English</td><td>21 Feb 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+          <tr><td>Natural Science</td><td>25 Feb 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+          <tr><td>IT</td><td>27 Feb 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+          <tr><td>Sanskrit</td><td>28 Feb 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+          <tr><td>Hindi - A</td><td>02 Mar 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+          <tr><td>Social Science</td><td>07 Mar 2026</td><td>10:30 AM</td><td>3 Hours</td></tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:12px;font-size:13px;color:#64748b">Note: This is a tentative schedule. Final dates will be issued by the board.</p>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  © Thinkora Study • Designed by Shankar Singh Rajput. All Right Reserved.
+</footer>
+
+  </div>  <script>
+    // simple tab switching
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(l => l.addEventListener('click', ()=>{
+      links.forEach(x=>x.classList.remove('active'));
+      l.classList.add('active');
+      const target = l.getAttribute('data-target');
+      document.querySelectorAll('section .card').forEach(card=>card.style.display='none');
+      const el = document.getElementById(target);
+      if(el) el.style.display='block';
+      window.scrollTo({top:0,behavior:'smooth'});
+    }));
+  </script></body>
+</html>
